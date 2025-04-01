@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SP COTTON | SUPER ADMIN</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <!-- app favicon -->
+    <link rel="shortcut icon" href="assets/img/logo.webp" />
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      rel="stylesheet"
+    />
+    <!-- plugin stylesheets -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors.css" />
+    <!-- app style -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- Include Choices.js CSS & JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  </head>
+
+  <body>
+    <!-- begin app -->
+    <div class="app">
+      <!-- begin app-wrap -->
+      <div class="app-wrap">
+        <!-- begin pre-loader -->
+        <div class="loader">
+          <div class="h-100 d-flex justify-content-center">
+            <div class="align-self-center">
+              <img src="assets/img/loader/loader.svg" alt="loader" />
+            </div>
+          </div>
+        </div>
+
+        <header class="app-header top-bar">
+          <!-- begin navbar -->
+          <nav class="navbar navbar-expand-md">
+            <!-- begin navbar-header -->
+            <div class="navbar-header d-flex align-items-center">
+              <a class="navbar-brand" href="index.html">
+                <img
+                  src="assets/img/logo.webp"
+                  class="img-fluid logo-desktop"
+                  alt="logo"
+                />
+                <img
+                  src="assets/img/logo.webp"
+                  class="img-fluid logo-mobile"
+                  alt="logo"
+                />
+              </a>
+            </div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="ti ti-align-left"></i>
+            </button>
+            <!-- end navbar-header -->
+            <!-- begin navigation -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="navigation d-flex">
+                <ul class="navbar-nav nav-left">
+                  <li
+                    class="nav-item full-screen d-none d-lg-block"
+                    id="btnFullscreen"
+                  >
+                    <a href="javascript:void(0)" class="nav-link expand">
+                      <i class="icon-size-fullscreen"></i>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav nav-right ml-auto">
+                  <li class="nav-item dropdown user-profile">
+                    <a
+                      href="javascript:void(0)"
+                      class="nav-link dropdown-toggle"
+                      id="navbarDropdown4"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <img src="assets/img/avtar/02.jpg" alt="avtar-img" />
+                      <span class="bg-success user-status"></span>
+                    </a>
+                    <div
+                      class="dropdown-menu animated fadeIn"
+                      aria-labelledby="navbarDropdown"
+                    >
+                      <div class="bg-gradient px-4 py-3">
+                        <div
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <div class="mr-1">
+                            <h4 class="text-white mb-0">Admin</h4>
+                            <small class="text-white"
+                              >paymentcounter@gmail.com</small
+                            >
+                          </div>
+                          <a
+                            href="index.html"
+                            class="text-white font-20 tooltip-wrapper"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title=""
+                            data-original-title="Logout"
+                          >
+                            <i class="zmdi zmdi-power"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- end navigation -->
+          </nav>
+          <!-- end navbar -->
+        </header>
+
+        <div class="app-container">
+          <div class="app-main" id="main">
+            <div class="container-fluid">
+              <div class="row">
+                <div
+                  class="col-sm-8 col-md-8 col-lg-8 offset-lg-2 offset-md-2 offset-sm-0"
+                >
+                  <div class="">
+                    <div class="">
+                      <a href="dashboard.html" class="btn btn-primary btn-xs">
+                        <i class="fa fa-chevron-circle-left"></i> BACK</a
+                      >
+                    </div>
+                    <div class="text-center">
+                      <h5 class="text-danger">SALARY</h5>
+                    </div>
+                  </div>
+
+                  <div class="row mb-5">
+                    <div class="col-xl-12">
+                      <div class="card card-statistics">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="mt-4 table-responsive">
+                                <table class="table table-bordered text-center">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col" class="text-dark">
+                                        FIXED SALARY
+                                      </th>
+                                      <th scope="col">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="fixedSalary"
+                                          name="fixedSalary"
+                                          placeholder=""
+                                        />
+                                      </th>
+                                    </tr>
+                                    <tr>
+                                      <th scope="col" class="text-dark">
+                                        ON PIECES
+                                      </th>
+                                      <th scope="col">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="on-pices"
+                                          name="on-pices"
+                                          placeholder=""
+                                        />
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                </table>
+
+                                <div class="text-right mt-4">
+                                  <button type="submit" class="btn btn-primary">
+                                    <i class="fa fa-save"></i> Save
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <h6 class="text-danger">Salary</h6>
+                              <div class="mt-4 table-responsive">
+                                <table
+                                  id="datatable"
+                                  class="display compact table table-striped table-bordered dataTable"
+                                  role="grid"
+                                  aria-describedby="datatable_info"
+                                >
+                                  <thead>
+                                    <tr role="row">
+                                      <th
+                                        class="sorting_asc"
+                                        tabindex="0"
+                                        aria-controls="datatable"
+                                        rowspan="1"
+                                        colspan="1"
+                                        aria-sort="ascending"
+                                        aria-label="Name: activate to sort column descending"
+                                        style="width: 155.672px"
+                                      >
+                                        Fixed Salary
+                                      </th>
+                                      <th
+                                        class="sorting"
+                                        tabindex="0"
+                                        aria-controls="datatable"
+                                        rowspan="1"
+                                        colspan="1"
+                                        aria-label="Position: activate to sort column ascending"
+                                        style="width: 253.031px"
+                                      >
+                                        On Pices
+                                      </th>
+
+                                      <th
+                                        class="sorting"
+                                        tabindex="0"
+                                        aria-controls="datatable"
+                                        rowspan="1"
+                                        colspan="1"
+                                        aria-label="Age: activate to sort column ascending"
+                                        style="width: 52.1562px"
+                                      >
+                                        Action
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr role="row" class="odd">
+                                      <td class="sorting_1">Rs.300</td>
+
+                                      <td>1</td>
+
+                                      <td>
+                                        <button class="btn btn-danger btn-xs">
+                                          <i class="fa fa-trash"></i>
+                                        </button>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end app-wrap -->
+    </div>
+    <!-- end app -->
+
+    <!-- plugins -->
+    <script src="assets/js/vendors.js"></script>
+
+    <!-- custom app -->
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SP COTTON | SUPER ADMIN</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <!-- app favicon -->
+    <link rel="shortcut icon" href="assets/img/logo.webp" />
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      rel="stylesheet"
+    />
+    <!-- plugin stylesheets -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors.css" />
+    <!-- app style -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- Include Choices.js CSS & JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  </head>
+
+  <body>
+    <!-- begin app -->
+    <div class="app">
+      <!-- begin app-wrap -->
+      <div class="app-wrap">
+        <!-- begin pre-loader -->
+        <div class="loader">
+          <div class="h-100 d-flex justify-content-center">
+            <div class="align-self-center">
+              <img src="assets/img/loader/loader.svg" alt="loader" />
+            </div>
+          </div>
+        </div>
+
+        <header class="app-header top-bar">
+          <!-- begin navbar -->
+          <nav class="navbar navbar-expand-md">
+            <!-- begin navbar-header -->
+            <div class="navbar-header d-flex align-items-center">
+              <a class="navbar-brand" href="index.html">
+                <img
+                  src="assets/img/logo.webp"
+                  class="img-fluid logo-desktop"
+                  alt="logo"
+                />
+                <img
+                  src="assets/img/logo.webp"
+                  class="img-fluid logo-mobile"
+                  alt="logo"
+                />
+              </a>
+            </div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="ti ti-align-left"></i>
+            </button>
+            <!-- end navbar-header -->
+            <!-- begin navigation -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="navigation d-flex">
+                <ul class="navbar-nav nav-left">
+                  <li
+                    class="nav-item full-screen d-none d-lg-block"
+                    id="btnFullscreen"
+                  >
+                    <a href="javascript:void(0)" class="nav-link expand">
+                      <i class="icon-size-fullscreen"></i>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav nav-right ml-auto">
+                  <li class="nav-item dropdown user-profile">
+                    <a
+                      href="javascript:void(0)"
+                      class="nav-link dropdown-toggle"
+                      id="navbarDropdown4"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <img src="assets/img/avtar/02.jpg" alt="avtar-img" />
+                      <span class="bg-success user-status"></span>
+                    </a>
+                    <div
+                      class="dropdown-menu animated fadeIn"
+                      aria-labelledby="navbarDropdown"
+                    >
+                      <div class="bg-gradient px-4 py-3">
+                        <div
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <div class="mr-1">
+                            <h4 class="text-white mb-0">Admin</h4>
+                            <small class="text-white"
+                              >paymentcounter@gmail.com</small
+                            >
+                          </div>
+                          <a
+                            href="index.html"
+                            class="text-white font-20 tooltip-wrapper"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title=""
+                            data-original-title="Logout"
+                          >
+                            <i class="zmdi zmdi-power"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- end navigation -->
+          </nav>
+          <!-- end navbar -->
+        </header>
+
+        <div class="app-container">
+          <div class="app-main" id="main">
+            <div class="container-fluid">
+              <div class="row">
+                <div
+                  class="col-sm-8 col-md-8 col-lg-8 offset-lg-2 offset-md-2 offset-sm-0"
+                >
+                  <div class="">
+                    <div class="">
+                      <a href="dashboard.html" class="btn btn-primary btn-xs">
+                        <i class="fa fa-chevron-circle-left"></i> BACK</a
+                      >
+                    </div>
+                    <div class="text-center">
+                      <h5 class="text-danger">STAFF PERFORMANCE</h5>
+                    </div>
+                  </div>
+
+                  <div class="row mb-5">
+                    <div class="col-xl-12">
+                      <div class="card card-statistics">
+                        <div class="card-body">
+                          <h5>SEE STATISTICS</h5>
+                          <button class="btn btn-primary" onclick="showGraph()">
+                            SEE GRAPH
+                          </button>
+                          <hr />
+                          <h6>Filter By:</h6>
+                          <ul class="d-flex flex-wrap" style="gap: 10px">
+                            <li style="list-style: none">
+                              <button
+                                class="btn btn-outline-secondary"
+                                onclick="filterGraph('day')"
+                              >
+                                BY DAY WISE
+                              </button>
+                            </li>
+                            <li style="list-style: none">
+                              <button
+                                class="btn btn-outline-secondary"
+                                onclick="filterGraph('week')"
+                              >
+                                BY WEEK WISE
+                              </button>
+                            </li>
+                            <li style="list-style: none">
+                              <button
+                                class="btn btn-outline-secondary"
+                                onclick="filterGraph('month')"
+                              >
+                                BY MONTH WISE
+                              </button>
+                            </li>
+                            <li style="list-style: none">
+                              <button
+                                class="btn btn-outline-secondary"
+                                onclick="filterGraph('year')"
+                              >
+                                BY YEAR WISE
+                              </button>
+                            </li>
+                          </ul>
+                          <div
+                            id="graphContainer"
+                            style="display: none; margin-top: 20px"
+                          >
+                            <canvas id="statisticsGraph"></canvas>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-12">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="accordion" id="accordionExample">
+                            <div class="">
+                              <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                  <button
+                                    class="btn btn-link btn-block text-left"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapseOne"
+                                    aria-expanded="true"
+                                    aria-controls="collapseOne"
+                                  >
+                                    SALESMAN LIST
+                                  </button>
+                                </h2>
+                              </div>
+
+                              <div
+                                id="collapseOne"
+                                class="collapse show"
+                                aria-labelledby="headingOne"
+                                data-parent="#accordionExample"
+                              >
+                                <div class="card-body">
+                                  <div class="mt-4 table-responsive">
+                                    <table
+                                      id="datatable"
+                                      class="display compact table table-striped table-bordered dataTable"
+                                      role="grid"
+                                      aria-describedby="datatable_info"
+                                    >
+                                      <thead>
+                                        <tr role="row">
+                                          <th
+                                            class="sorting_asc"
+                                            tabindex="0"
+                                            aria-controls="datatable"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-sort="ascending"
+                                            aria-label="Name: activate to sort column descending"
+                                            style="width: 155.672px"
+                                          >
+                                            Salesman Name
+                                          </th>
+                                          <th
+                                            class="sorting"
+                                            tabindex="0"
+                                            aria-controls="datatable"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-label="Position: activate to sort column ascending"
+                                            style="width: 253.031px"
+                                          >
+                                            Sales Amount
+                                          </th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr role="row" class="odd">
+                                          <td>Suraj Jamdade</td>
+                                          <td>Rs.3000</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                  <div class="d-flex justify-content-end">
+                                    <nav aria-label="Page navigation example">
+                                      <ul class="pagination">
+                                        <li class="page-item">
+                                          <a
+                                            class="page-link"
+                                            href="#"
+                                            aria-label="Previous"
+                                          >
+                                            <span aria-hidden="true"
+                                              >&laquo;</span
+                                            >
+                                          </a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#">1</a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#">3</a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a
+                                            class="page-link"
+                                            href="#"
+                                            aria-label="Next"
+                                          >
+                                            <span aria-hidden="true"
+                                              >&raquo;</span
+                                            >
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </nav>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="">
+                              <div class="card-header" id="headingTwo">
+                                <h2 class="mb-0">
+                                  <button
+                                    class="btn btn-link btn-block text-left collapsed"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapseTwo"
+                                    aria-expanded="false"
+                                    aria-controls="collapseTwo"
+                                  >
+                                    CUTTING MASTER LIST
+                                  </button>
+                                </h2>
+                              </div>
+                              <div
+                                id="collapseTwo"
+                                class="collapse"
+                                aria-labelledby="headingTwo"
+                                data-parent="#accordionExample"
+                              >
+                                <div class="card-body">
+                                  <div class="mt-4 table-responsive">
+                                    <table
+                                      id="datatable"
+                                      class="display compact table table-striped table-bordered dataTable"
+                                      role="grid"
+                                      aria-describedby="datatable_info"
+                                    >
+                                      <thead>
+                                        <tr role="row">
+                                          <th
+                                            class="sorting_asc"
+                                            tabindex="0"
+                                            aria-controls="datatable"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-sort="ascending"
+                                            aria-label="Name: activate to sort column descending"
+                                            style="width: 155.672px"
+                                          >
+                                            Salesman Name
+                                          </th>
+                                          <th
+                                            class="sorting"
+                                            tabindex="0"
+                                            aria-controls="datatable"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-label="Position: activate to sort column ascending"
+                                            style="width: 253.031px"
+                                          >
+                                            Worked Quantity
+                                          </th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr role="row" class="odd">
+                                          <td>Suraj Jamdade</td>
+                                          <td>10</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                  <div class="d-flex justify-content-end">
+                                    <nav aria-label="Page navigation example">
+                                      <ul class="pagination">
+                                        <li class="page-item">
+                                          <a
+                                            class="page-link"
+                                            href="#"
+                                            aria-label="Previous"
+                                          >
+                                            <span aria-hidden="true"
+                                              >&laquo;</span
+                                            >
+                                          </a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#">1</a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#">3</a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a
+                                            class="page-link"
+                                            href="#"
+                                            aria-label="Next"
+                                          >
+                                            <span aria-hidden="true"
+                                              >&raquo;</span
+                                            >
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </nav>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="">
+                              <div class="card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                  <button
+                                    class="btn btn-link btn-block text-left collapsed"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapseThree"
+                                    aria-expanded="false"
+                                    aria-controls="collapseThree"
+                                  >
+                                    WAHING BOY LIST
+                                  </button>
+                                </h2>
+                              </div>
+                              <div
+                                id="collapseThree"
+                                class="collapse"
+                                aria-labelledby="headingThree"
+                                data-parent="#accordionExample"
+                              >
+                                <div class="card-body">
+                                  <div class="mt-4 table-responsive">
+                                    <table
+                                      id="datatable"
+                                      class="display compact table table-striped table-bordered dataTable"
+                                      role="grid"
+                                      aria-describedby="datatable_info"
+                                    >
+                                      <thead>
+                                        <tr role="row">
+                                          <th
+                                            class="sorting_asc"
+                                            tabindex="0"
+                                            aria-controls="datatable"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-sort="ascending"
+                                            aria-label="Name: activate to sort column descending"
+                                            style="width: 155.672px"
+                                          >
+                                            Salesman Name
+                                          </th>
+                                          <th
+                                            class="sorting"
+                                            tabindex="0"
+                                            aria-controls="datatable"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-label="Position: activate to sort column ascending"
+                                            style="width: 253.031px"
+                                          >
+                                            Worked Quantity
+                                          </th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr role="row" class="odd">
+                                          <td>Suraj Jamdade</td>
+                                          <td>10</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                  <div class="d-flex justify-content-end">
+                                    <nav aria-label="Page navigation example">
+                                      <ul class="pagination">
+                                        <li class="page-item">
+                                          <a
+                                            class="page-link"
+                                            href="#"
+                                            aria-label="Previous"
+                                          >
+                                            <span aria-hidden="true"
+                                              >&laquo;</span
+                                            >
+                                          </a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#">1</a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#">3</a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a
+                                            class="page-link"
+                                            href="#"
+                                            aria-label="Next"
+                                          >
+                                            <span aria-hidden="true"
+                                              >&raquo;</span
+                                            >
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </nav>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="">
+                              <div class="card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                  <button
+                                    class="btn btn-link btn-block text-left collapsed"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapseFour"
+                                    aria-expanded="false"
+                                    aria-controls="collapseFour"
+                                  >
+                                    STICHERS LIST
+                                  </button>
+                                </h2>
+                              </div>
+                              <div
+                                id="collapseFour"
+                                class="collapse"
+                                aria-labelledby="headingThree"
+                                data-parent="#accordionExample"
+                              >
+                                <div class="card-body">
+                                  <div class="mt-4 table-responsive">
+                                    <table
+                                      id="datatable"
+                                      class="display compact table table-striped table-bordered dataTable"
+                                      role="grid"
+                                      aria-describedby="datatable_info"
+                                    >
+                                      <thead>
+                                        <tr role="row">
+                                          <th
+                                            class="sorting_asc"
+                                            tabindex="0"
+                                            aria-controls="datatable"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-sort="ascending"
+                                            aria-label="Name: activate to sort column descending"
+                                            style="width: 155.672px"
+                                          >
+                                            Salesman Name
+                                          </th>
+                                          <th
+                                            class="sorting"
+                                            tabindex="0"
+                                            aria-controls="datatable"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-label="Position: activate to sort column ascending"
+                                            style="width: 253.031px"
+                                          >
+                                            Worked Quantity
+                                          </th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr role="row" class="odd">
+                                          <td>Suraj Jamdade</td>
+                                          <td>10</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                  <div class="d-flex justify-content-end">
+                                    <nav aria-label="Page navigation example">
+                                      <ul class="pagination">
+                                        <li class="page-item">
+                                          <a
+                                            class="page-link"
+                                            href="#"
+                                            aria-label="Previous"
+                                          >
+                                            <span aria-hidden="true"
+                                              >&laquo;</span
+                                            >
+                                          </a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#">1</a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#">3</a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a
+                                            class="page-link"
+                                            href="#"
+                                            aria-label="Next"
+                                          >
+                                            <span aria-hidden="true"
+                                              >&raquo;</span
+                                            >
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </nav>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="">
+                              <div class="card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                  <button
+                                    class="btn btn-link btn-block text-left collapsed"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapseFive"
+                                    aria-expanded="false"
+                                    aria-controls="collapseFive"
+                                  >
+                                    KACH BUTTON BOY LIST
+                                  </button>
+                                </h2>
+                              </div>
+                              <div
+                                id="collapseFive"
+                                class="collapse"
+                                aria-labelledby="headingThree"
+                                data-parent="#accordionExample"
+                              >
+                                <div class="card-body">
+                                  <div class="mt-4 table-responsive">
+                                    <table
+                                      id="datatable"
+                                      class="display compact table table-striped table-bordered dataTable"
+                                      role="grid"
+                                      aria-describedby="datatable_info"
+                                    >
+                                      <thead>
+                                        <tr role="row">
+                                          <th
+                                            class="sorting_asc"
+                                            tabindex="0"
+                                            aria-controls="datatable"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-sort="ascending"
+                                            aria-label="Name: activate to sort column descending"
+                                            style="width: 155.672px"
+                                          >
+                                            Salesman Name
+                                          </th>
+                                          <th
+                                            class="sorting"
+                                            tabindex="0"
+                                            aria-controls="datatable"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-label="Position: activate to sort column ascending"
+                                            style="width: 253.031px"
+                                          >
+                                            Worked Quantity
+                                          </th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr role="row" class="odd">
+                                          <td>Suraj Jamdade</td>
+                                          <td>10</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                  <div class="d-flex justify-content-end">
+                                    <nav aria-label="Page navigation example">
+                                      <ul class="pagination">
+                                        <li class="page-item">
+                                          <a
+                                            class="page-link"
+                                            href="#"
+                                            aria-label="Previous"
+                                          >
+                                            <span aria-hidden="true"
+                                              >&laquo;</span
+                                            >
+                                          </a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#">1</a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#">3</a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a
+                                            class="page-link"
+                                            href="#"
+                                            aria-label="Next"
+                                          >
+                                            <span aria-hidden="true"
+                                              >&raquo;</span
+                                            >
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </nav>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="">
+                              <div class="card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                  <button
+                                    class="btn btn-link btn-block text-left collapsed"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapseSix"
+                                    aria-expanded="false"
+                                    aria-controls="collapseSix"
+                                  >
+                                    IRON MAN LIST
+                                  </button>
+                                </h2>
+                              </div>
+                              <div
+                                id="collapseSix"
+                                class="collapse"
+                                aria-labelledby="headingThree"
+                                data-parent="#accordionExample"
+                              >
+                                <div class="card-body">
+                                  <div class="mt-4 table-responsive">
+                                    <table
+                                      id="datatable"
+                                      class="display compact table table-striped table-bordered dataTable"
+                                      role="grid"
+                                      aria-describedby="datatable_info"
+                                    >
+                                      <thead>
+                                        <tr role="row">
+                                          <th
+                                            class="sorting_asc"
+                                            tabindex="0"
+                                            aria-controls="datatable"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-sort="ascending"
+                                            aria-label="Name: activate to sort column descending"
+                                            style="width: 155.672px"
+                                          >
+                                            Salesman Name
+                                          </th>
+                                          <th
+                                            class="sorting"
+                                            tabindex="0"
+                                            aria-controls="datatable"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-label="Position: activate to sort column ascending"
+                                            style="width: 253.031px"
+                                          >
+                                            Worked Quantity
+                                          </th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr role="row" class="odd">
+                                          <td>Suraj Jamdade</td>
+                                          <td>10</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                  <div class="d-flex justify-content-end">
+                                    <nav aria-label="Page navigation example">
+                                      <ul class="pagination">
+                                        <li class="page-item">
+                                          <a
+                                            class="page-link"
+                                            href="#"
+                                            aria-label="Previous"
+                                          >
+                                            <span aria-hidden="true"
+                                              >&laquo;</span
+                                            >
+                                          </a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#">1</a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#">3</a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a
+                                            class="page-link"
+                                            href="#"
+                                            aria-label="Next"
+                                          >
+                                            <span aria-hidden="true"
+                                              >&raquo;</span
+                                            >
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </nav>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="">
+                              <div class="card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                  <button
+                                    class="btn btn-link btn-block text-left collapsed"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapseSeven"
+                                    aria-expanded="false"
+                                    aria-controls="collapseSeven"
+                                  >
+                                    ATTENDANCE
+                                  </button>
+                                </h2>
+                              </div>
+                              <div
+                                id="collapseSeven"
+                                class="collapse"
+                                aria-labelledby="headingThree"
+                                data-parent="#accordionExample"
+                              >
+                                <div class="card-body">
+                                  <div class="mt-4 table-responsive">
+                                    <table
+                                      id="datatable"
+                                      class="display compact table table-striped table-bordered dataTable"
+                                      role="grid"
+                                      aria-describedby="datatable_info"
+                                    >
+                                      <thead>
+                                        <tr role="row">
+                                          <th
+                                            class="sorting_asc"
+                                            tabindex="0"
+                                            aria-controls="datatable"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-sort="ascending"
+                                            aria-label="Name: activate to sort column descending"
+                                            style="width: 155.672px"
+                                          >
+                                            Salesman Name
+                                          </th>
+                                          <th
+                                            class="sorting"
+                                            tabindex="0"
+                                            aria-controls="datatable"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-label="Position: activate to sort column ascending"
+                                            style="width: 253.031px"
+                                          >
+                                            Worked Quantity
+                                          </th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr role="row" class="odd">
+                                          <td>Suraj Jamdade</td>
+                                          <td>10</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                  <div class="d-flex justify-content-end">
+                                    <nav aria-label="Page navigation example">
+                                      <ul class="pagination">
+                                        <li class="page-item">
+                                          <a
+                                            class="page-link"
+                                            href="#"
+                                            aria-label="Previous"
+                                          >
+                                            <span aria-hidden="true"
+                                              >&laquo;</span
+                                            >
+                                          </a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#">1</a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#">3</a>
+                                        </li>
+                                        <li class="page-item">
+                                          <a
+                                            class="page-link"
+                                            href="#"
+                                            aria-label="Next"
+                                          >
+                                            <span aria-hidden="true"
+                                              >&raquo;</span
+                                            >
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </nav>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="text-right mt-5">
+                            <button class="btn btn-primary">
+                              <i class="fa fa-print"></i> GENERATE REPORT
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end app-wrap -->
+    </div>
+    <!-- end app -->
+
+    <!-- plugins -->
+    <script src="assets/js/vendors.js"></script>
+
+    <!-- custom app -->
+    <script src="assets/js/app.js"></script>
+
+    <script>
+      function showGraph() {
+        document.getElementById("graphContainer").style.display = "block";
+        renderGraph("day");
+      }
+
+      function filterGraph(filterType) {
+        renderGraph(filterType);
+      }
+
+      function renderGraph(filterType) {
+        var ctx = document.getElementById("statisticsGraph").getContext("2d");
+        if (window.myChart) {
+          window.myChart.destroy();
+        }
+        window.myChart = new Chart(ctx, {
+          type: "line",
+          data: {
+            labels:
+              filterType === "day"
+                ? [
+                    "6AM",
+                    "7AM",
+                    "8AM",
+                    "9AM",
+                    "10AM",
+                    "11AM",
+                    "12AM",
+                    "1PM",
+                    "2PM",
+                    "3PM",
+                    "4PM",
+                    "5PM",
+                    "6PM",
+                    "7PM",
+                    "8PM",
+                    "9PM",
+                  ]
+                : filterType === "week"
+                ? ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+                : filterType === "month"
+                ? ["Week 1", "Week 2", "Week 3", "Week 4"]
+                : [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec",
+                  ],
+            datasets: [
+              {
+                label: "Statistics",
+                data:
+                  filterType === "day"
+                    ? [
+                        10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130,
+                        140, 40, 50, 80,
+                      ]
+                    : filterType === "week"
+                    ? [100, 200, 150, 300, 400, 500, 600]
+                    : filterType === "month"
+                    ? [400, 500, 600, 700]
+                    : [
+                        1000, 2000, 1500, 3000, 4000, 5000, 6000, 7000, 8000,
+                        9000, 10000, 3000,
+                      ],
+                borderColor: "blue",
+                borderWidth: 2,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+          },
+        });
+      }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </body>
+</html>

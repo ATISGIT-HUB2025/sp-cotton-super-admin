@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SP COTTON | ADMIN</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <!-- app favicon -->
+    <link rel="shortcut icon" href="assets/img/logo.webp" />
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      rel="stylesheet"
+    />
+    <!-- plugin stylesheets -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors.css" />
+    <!-- app style -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
+  </head>
+
+  <body>
+    <!-- begin app -->
+    <div class="app">
+      <!-- begin app-wrap -->
+      <div class="app-wrap">
+        <!-- begin pre-loader -->
+        <div class="loader">
+          <div class="h-100 d-flex justify-content-center">
+            <div class="align-self-center">
+              <img src="assets/img/loader/loader.svg" alt="loader" />
+            </div>
+          </div>
+        </div>
+
+        <header class="app-header top-bar">
+          <!-- begin navbar -->
+          <nav class="navbar navbar-expand-md">
+            <!-- begin navbar-header -->
+            <div class="navbar-header d-flex align-items-center">
+              <a class="navbar-brand" href="index.html">
+                <img
+                  src="assets/img/logo.webp"
+                  class="img-fluid logo-desktop"
+                  alt="logo"
+                />
+                <img
+                  src="assets/img/logo.webp"
+                  class="img-fluid logo-mobile"
+                  alt="logo"
+                />
+              </a>
+            </div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="ti ti-align-left"></i>
+            </button>
+            <!-- end navbar-header -->
+            <!-- begin navigation -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="navigation d-flex">
+                <ul class="navbar-nav nav-left">
+                  <li
+                    class="nav-item full-screen d-none d-lg-block"
+                    id="btnFullscreen"
+                  >
+                    <a href="javascript:void(0)" class="nav-link expand">
+                      <i class="icon-size-fullscreen"></i>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav nav-right ml-auto">
+                  <li class="nav-item dropdown user-profile">
+                    <a
+                      href="javascript:void(0)"
+                      class="nav-link dropdown-toggle"
+                      id="navbarDropdown4"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <img src="assets/img/avtar/02.jpg" alt="avtar-img" />
+                      <span class="bg-success user-status"></span>
+                    </a>
+                    <div
+                      class="dropdown-menu animated fadeIn"
+                      aria-labelledby="navbarDropdown"
+                    >
+                      <div class="bg-gradient px-4 py-3">
+                        <div
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <div class="mr-1">
+                            <h4 class="text-white mb-0">Admin</h4>
+                            <small class="text-white">admin@gmail.com</small>
+                          </div>
+                          <a
+                            href="index.html"
+                            class="text-white font-20 tooltip-wrapper"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title=""
+                            data-original-title="Logout"
+                          >
+                            <i class="zmdi zmdi-power"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- end navigation -->
+          </nav>
+          <!-- end navbar -->
+        </header>
+
+        <div class="app-container">
+          <div class="app-main" id="main">
+            <div class="container-fluid">
+              <!-- begin row -->
+              <div class="row">
+                <div
+                  class="col-sm-6 col-md-6 col-lg-6 offset-lg-3 offset-md-3 offset-sm-0"
+                >
+                  <div class="">
+                    <div class="">
+                      <a href="dashboard.html" class="btn btn-primary btn-xs">
+                        <i class="fa fa-chevron-circle-left"></i> BACK</a
+                      >
+                    </div>
+                    <div class="text-center">
+                      <h5 class="text-danger">GO BY</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xxl-12 col-lg-12 mb-4">
+                      <div class="card p-4">
+                        <a
+                          href="https://atisgit-hub2025.github.io/sp-cotton-sales/"
+                          target="_blank"
+                          class="d-flex align-items-center justify-content-between text-dark font-weight-bold"
+                        >
+                          <span>SALESMAN</span>
+                          <div class="dashboard_icon">
+                            <i class="fa fa-bar-chart"></i>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-xxl-12 col-lg-12 mb-4">
+                      <div class="card p-4">
+                        <a
+                          href="https://atisgit-hub2025.github.io/sp-cotton-payment-counter/"
+                          target="_blank"
+                          class="d-flex align-items-center justify-content-between text-dark font-weight-bold"
+                        >
+                          <span>PAYMENT COUNTER</span>
+                          <div class="dashboard_icon">
+                            <i class="fa fa-money"></i>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-xxl-12 col-lg-12 mb-4">
+                      <div class="card p-4">
+                        <a
+                          href="https://atisgit-hub2025.github.io/sp-cotton-washing/"
+                          target="_blank"
+                          class="d-flex align-items-center justify-content-between text-dark font-weight-bold"
+                        >
+                          <span>WASHING</span>
+                          <div class="dashboard_icon">
+                            <i class="fa fa-cloud"></i>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-xxl-12 col-lg-12 mb-4">
+                      <div class="card p-4">
+                        <a
+                          href="https://atisgit-hub2025.github.io/sp-cotton-cutting-master/"
+                          target="_blank"
+                          class="d-flex align-items-center justify-content-between text-dark font-weight-bold"
+                        >
+                          <span>CUTTING MASTER</span>
+                          <div class="dashboard_icon">
+                            <i class="fa fa-hand-scissors-o"></i>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-xxl-12 col-lg-12 mb-4">
+                      <div class="card p-4">
+                        <a
+                          href="https://atisgit-hub2025.github.io/sp-cotton-stichers/"
+                          target="_blank"
+                          class="d-flex align-items-center justify-content-between text-dark font-weight-bold"
+                        >
+                          <span>STICHERS</span>
+                          <div class="dashboard_icon">
+                            <i class="fa fa-dashcube"></i>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-xxl-12 col-lg-12 mb-4">
+                      <div class="card p-4">
+                        <a
+                          href="https://atisgit-hub2025.github.io/sp-cotton-stiches-manager/"
+                          target="_blank"
+                          class="d-flex align-items-center justify-content-between text-dark font-weight-bold"
+                        >
+                          <span>STICHERS MANAGER</span>
+                          <div class="dashboard_icon">
+                            <i class="fa fa-user-circle"></i>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-xxl-12 col-lg-12 mb-4">
+                      <div class="card p-4">
+                        <a
+                          href="https://atisgit-hub2025.github.io/sp-cotton-katch-button/"
+                          target="_blank"
+                          class="d-flex align-items-center justify-content-between text-dark font-weight-bold"
+                        >
+                          <span>KACH BUTTON</span>
+                          <div class="dashboard_icon">
+                            <i class="fa fa-bitbucket"></i>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-xxl-12 col-lg-12 mb-4">
+                      <div class="card p-4">
+                        <a
+                          href="https://atisgit-hub2025.github.io/sp-cotton-iron/"
+                          target="_blank"
+                          class="d-flex align-items-center justify-content-between text-dark font-weight-bold"
+                        >
+                          <span>IRON</span>
+                          <div class="dashboard_icon">
+                            <i class="fa fa-chain-broken"></i>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-xxl-12 col-lg-12 mb-4">
+                      <div class="card p-4">
+                        <a
+                          href="https://atisgit-hub2025.github.io/sp-cotton-ready-stock/"
+                          target="_blank"
+                          class="d-flex align-items-center justify-content-between text-dark font-weight-bold"
+                        >
+                          <span>READY STOCK</span>
+                          <div class="dashboard_icon">
+                            <i class="fa fa-star-o"></i>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-xxl-12 col-lg-12 mb-4">
+                      <div class="card p-4">
+                        <a
+                          href="https://atisgit-hub2025.github.io/sp-cotton-admin/"
+                          target="_blank"
+                          class="d-flex align-items-center justify-content-between text-dark font-weight-bold"
+                        >
+                          <span>ADMIN</span>
+                          <div class="dashboard_icon">
+                            <i class="fa fa-user"></i>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- end row -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end app-wrap -->
+    </div>
+    <!-- end app -->
+
+    <!-- plugins -->
+    <script src="assets/js/vendors.js"></script>
+
+    <!-- custom app -->
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

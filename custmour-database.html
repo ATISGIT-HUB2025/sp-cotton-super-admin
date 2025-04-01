@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SP COTTON | SUPER ADMIN</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <!-- app favicon -->
+    <link rel="shortcut icon" href="assets/img/logo.webp" />
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      rel="stylesheet"
+    />
+    <!-- plugin stylesheets -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors.css" />
+    <!-- app style -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- Include Choices.js CSS & JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  </head>
+
+  <body>
+    <!-- begin app -->
+    <div class="app">
+      <!-- begin app-wrap -->
+      <div class="app-wrap">
+        <!-- begin pre-loader -->
+        <div class="loader">
+          <div class="h-100 d-flex justify-content-center">
+            <div class="align-self-center">
+              <img src="assets/img/loader/loader.svg" alt="loader" />
+            </div>
+          </div>
+        </div>
+
+        <header class="app-header top-bar">
+          <!-- begin navbar -->
+          <nav class="navbar navbar-expand-md">
+            <!-- begin navbar-header -->
+            <div class="navbar-header d-flex align-items-center">
+              <a class="navbar-brand" href="index.html">
+                <img
+                  src="assets/img/logo.webp"
+                  class="img-fluid logo-desktop"
+                  alt="logo"
+                />
+                <img
+                  src="assets/img/logo.webp"
+                  class="img-fluid logo-mobile"
+                  alt="logo"
+                />
+              </a>
+            </div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="ti ti-align-left"></i>
+            </button>
+            <!-- end navbar-header -->
+            <!-- begin navigation -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="navigation d-flex">
+                <ul class="navbar-nav nav-left">
+                  <li
+                    class="nav-item full-screen d-none d-lg-block"
+                    id="btnFullscreen"
+                  >
+                    <a href="javascript:void(0)" class="nav-link expand">
+                      <i class="icon-size-fullscreen"></i>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav nav-right ml-auto">
+                  <li class="nav-item dropdown user-profile">
+                    <a
+                      href="javascript:void(0)"
+                      class="nav-link dropdown-toggle"
+                      id="navbarDropdown4"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <img src="assets/img/avtar/02.jpg" alt="avtar-img" />
+                      <span class="bg-success user-status"></span>
+                    </a>
+                    <div
+                      class="dropdown-menu animated fadeIn"
+                      aria-labelledby="navbarDropdown"
+                    >
+                      <div class="bg-gradient px-4 py-3">
+                        <div
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <div class="mr-1">
+                            <h4 class="text-white mb-0">Admin</h4>
+                            <small class="text-white"
+                              >superadmin@gmail.com</small
+                            >
+                          </div>
+                          <a
+                            href="index.html"
+                            class="text-white font-20 tooltip-wrapper"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title=""
+                            data-original-title="Logout"
+                          >
+                            <i class="zmdi zmdi-power"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- end navigation -->
+          </nav>
+          <!-- end navbar -->
+        </header>
+
+        <div class="app-container">
+          <div class="app-main" id="main">
+            <div class="container-fluid">
+              <div class="row">
+                <div
+                  class="col-sm-6 col-md-6 col-lg-6 offset-lg-3 offset-md-3 offset-sm-0"
+                >
+                  <div class="">
+                    <div class="">
+                      <a href="dashboard.html" class="btn btn-primary btn-xs">
+                        <i class="fa fa-chevron-circle-left"></i> BACK</a
+                      >
+                    </div>
+                    <div class="text-center">
+                      <h5 class="text-danger">CUSTMOUR INFORMATION</h5>
+                    </div>
+                  </div>
+
+                  <div class="row mb-5">
+                    <div class="col-xl-12">
+                      <div class="card card-statistics">
+                        <div class="card-body">
+                          <div class="datatable-wrapper table-responsive">
+                            <div
+                              id="datatable_wrapper"
+                              class="dataTables_wrapper dt-bootstrap4"
+                            >
+                              <div class="row">
+                                <div class="col-sm-12 col-md-6"></div>
+                                <div class="col-sm-12 col-md-6"></div>
+                              </div>
+                              <div class="row">
+                                <div class="col-sm-12">
+                                  <table
+                                    id="datatable"
+                                    class="display compact table table-striped table-bordered dataTable"
+                                    role="grid"
+                                    aria-describedby="datatable_info"
+                                  >
+                                    <thead>
+                                      <tr role="row">
+                                        <th
+                                          class="sorting_asc"
+                                          tabindex="0"
+                                          aria-controls="datatable"
+                                          rowspan="1"
+                                          colspan="1"
+                                          aria-sort="ascending"
+                                          aria-label="Name: activate to sort column descending"
+                                          style="width: 155.672px"
+                                        >
+                                          #
+                                        </th>
+
+                                        <th
+                                          class="sorting"
+                                          tabindex="0"
+                                          aria-controls="datatable"
+                                          rowspan="1"
+                                          colspan="1"
+                                          aria-label="Office: activate to sort column ascending"
+                                          style="width: 113.078px"
+                                        >
+                                          Bill No.
+                                        </th>
+                                        <th
+                                          class="sorting"
+                                          tabindex="0"
+                                          aria-controls="datatable"
+                                          rowspan="1"
+                                          colspan="1"
+                                          aria-label="Age: activate to sort column ascending"
+                                          style="width: 52.1562px"
+                                        >
+                                          Order Date
+                                        </th>
+                                        <th
+                                          class="sorting"
+                                          tabindex="0"
+                                          aria-controls="datatable"
+                                          rowspan="1"
+                                          colspan="1"
+                                          aria-label="Start date: activate to sort column ascending"
+                                          style="width: 104.578px"
+                                        >
+                                          Name
+                                        </th>
+                                        <th
+                                          class="sorting"
+                                          tabindex="0"
+                                          aria-controls="datatable"
+                                          rowspan="1"
+                                          colspan="1"
+                                          aria-label="Start date: activate to sort column ascending"
+                                          style="width: 104.578px"
+                                        >
+                                          Mo. No.
+                                        </th>
+                                        <th
+                                          class="sorting"
+                                          tabindex="0"
+                                          aria-controls="datatable"
+                                          rowspan="1"
+                                          colspan="1"
+                                          aria-label="Start date: activate to sort column ascending"
+                                          style="width: 104.578px"
+                                        >
+                                          Bill
+                                        </th>
+                                        <th
+                                          class="sorting"
+                                          tabindex="0"
+                                          aria-controls="datatable"
+                                          rowspan="1"
+                                          colspan="1"
+                                          aria-label="Start date: activate to sort column ascending"
+                                          style="width: 104.578px"
+                                        >
+                                          Advance
+                                        </th>
+                                        <th
+                                          class="sorting"
+                                          tabindex="0"
+                                          aria-controls="datatable"
+                                          rowspan="1"
+                                          colspan="1"
+                                          aria-label="Start date: activate to sort column ascending"
+                                          style="width: 104.578px"
+                                        >
+                                          Balance
+                                        </th>
+                                        <th
+                                          class="sorting"
+                                          tabindex="0"
+                                          aria-controls="datatable"
+                                          rowspan="1"
+                                          colspan="1"
+                                          aria-label="Start date: activate to sort column ascending"
+                                          style="width: 104.578px"
+                                        >
+                                          Fabric Images
+                                        </th>
+
+                                        <th
+                                          class="sorting"
+                                          tabindex="0"
+                                          aria-controls="datatable"
+                                          rowspan="1"
+                                          colspan="1"
+                                          aria-label="Salary: activate to sort column ascending"
+                                          style="width: 85.4844px"
+                                        >
+                                          ACTION
+                                        </th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr role="row" class="odd">
+                                        <td class="sorting_1">1</td>
+                                        <td>#001</td>
+                                        <td>15 March 2025</td>
+                                        <td>Suraj Jamdade</td>
+                                        <td>+91 9090909090</td>
+                                        <td>Rs.1000</td>
+                                        <td>
+                                          <span
+                                            class="badge bg-success text-white"
+                                            >Rs.500</span
+                                          >
+                                        </td>
+                                        <td>
+                                          <span
+                                            class="badge bg-danger text-white"
+                                            >Rs.500</span
+                                          >
+                                        </td>
+
+                                        <td>
+                                          <img
+                                            src="assets/img/real-estate/01.jpg"
+                                            alt=""
+                                            srcset=""
+                                            style="width: 40px; height: 40px"
+                                          />
+                                        </td>
+                                        <td>
+                                          <button
+                                            class="btn btn-dark btn-xs"
+                                            type="button"
+                                            data-toggle="modal"
+                                            data-target="#viewModal"
+                                          >
+                                            <i class="nav-icon ti ti-eye"></i>
+                                          </button>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- TODAYS BIRTHDAY -->
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <h5 class="text-danger">TODAYS BIRTHDAY</h5>
+
+                    <label class="custom-switch mb-3">
+                      <input type="checkbox" id="billingToggle" />
+                      <span class="custom-switch-slider"></span>
+                    </label>
+                  </div>
+
+                  <div class="collapse mb-3" id="collapseBilling">
+                    <div class="row mb-5">
+                      <div class="col-xl-12">
+                        <div class="card card-statistics">
+                          <div class="card-body">
+                            <div class="table-responsive">
+                              <table
+                                id="datatable"
+                                class="display compact table table-striped table-bordered dataTable"
+                                role="grid"
+                                aria-describedby="datatable_info"
+                              >
+                                <thead>
+                                  <tr role="row">
+                                    <th
+                                      class="sorting_asc"
+                                      tabindex="0"
+                                      aria-controls="datatable"
+                                      rowspan="1"
+                                      colspan="1"
+                                      aria-sort="ascending"
+                                      aria-label="Name: activate to sort column descending"
+                                      style="width: 155.672px"
+                                    >
+                                      #
+                                    </th>
+
+                                    <th
+                                      class="sorting"
+                                      tabindex="0"
+                                      aria-controls="datatable"
+                                      rowspan="1"
+                                      colspan="1"
+                                      aria-label="Office: activate to sort column ascending"
+                                      style="width: 113.078px"
+                                    >
+                                      Bill No.
+                                    </th>
+
+                                    <th
+                                      class="sorting"
+                                      tabindex="0"
+                                      aria-controls="datatable"
+                                      rowspan="1"
+                                      colspan="1"
+                                      aria-label="Start date: activate to sort column ascending"
+                                      style="width: 104.578px"
+                                    >
+                                      Name
+                                    </th>
+                                    <th
+                                      class="sorting"
+                                      tabindex="0"
+                                      aria-controls="datatable"
+                                      rowspan="1"
+                                      colspan="1"
+                                      aria-label="Start date: activate to sort column ascending"
+                                      style="width: 104.578px"
+                                    >
+                                      Mo. No.
+                                    </th>
+                                    <th
+                                      class="sorting"
+                                      tabindex="0"
+                                      aria-controls="datatable"
+                                      rowspan="1"
+                                      colspan="1"
+                                      aria-label="Start date: activate to sort column ascending"
+                                      style="width: 104.578px"
+                                    >
+                                      Today's Birthday
+                                    </th>
+
+                                    <th
+                                      class="sorting"
+                                      tabindex="0"
+                                      aria-controls="datatable"
+                                      rowspan="1"
+                                      colspan="1"
+                                      aria-label="Start date: activate to sort column ascending"
+                                      style="width: 104.578px"
+                                    >
+                                      Status
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr role="row" class="odd">
+                                    <td class="sorting_1">1</td>
+
+                                    <td>#001</td>
+
+                                    <td>Suraj Jamdade</td>
+                                    <td>+91 9090909090</td>
+                                    <td>14 March</td>
+
+                                    <td>
+                                      <span class="badge badge-success"
+                                        >Send</span
+                                      >
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- REPETED CUSTMOUR FREQUENCEY -->
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <h5 class="text-danger">REPETED CUSTMOUR FREQUENCEY</h5>
+
+                    <!-- Toggle Button -->
+                    <label class="custom-switch mb-3">
+                      <input type="checkbox" id="topMeasuremntToggle" />
+                      <span class="custom-switch-slider"></span>
+                    </label>
+                  </div>
+
+                  <div class="collapse mb-3" id="collapseTopMeasurement">
+                    <div class="row">
+                      <div class="col-xl-12">
+                        <div class="card p-3">
+                          <div class="table-responsive">
+                            <table
+                              id="datatable"
+                              class="display compact table table-striped table-bordered dataTable"
+                              role="grid"
+                              aria-describedby="datatable_info"
+                            >
+                              <thead>
+                                <tr role="row">
+                                  <th
+                                    class="sorting_asc"
+                                    tabindex="0"
+                                    aria-controls="datatable"
+                                    rowspan="1"
+                                    colspan="1"
+                                    aria-sort="ascending"
+                                    aria-label="Name: activate to sort column descending"
+                                    style="width: 155.672px"
+                                  >
+                                    #
+                                  </th>
+
+                                  <th
+                                    class="sorting"
+                                    tabindex="0"
+                                    aria-controls="datatable"
+                                    rowspan="1"
+                                    colspan="1"
+                                    aria-label="Office: activate to sort column ascending"
+                                    style="width: 113.078px"
+                                  >
+                                    Customer Name
+                                  </th>
+
+                                  <th
+                                    class="sorting"
+                                    tabindex="0"
+                                    aria-controls="datatable"
+                                    rowspan="1"
+                                    colspan="1"
+                                    aria-label="Start date: activate to sort column ascending"
+                                    style="width: 104.578px"
+                                  >
+                                    Mobile Number
+                                  </th>
+                                  <th
+                                    class="sorting"
+                                    tabindex="0"
+                                    aria-controls="datatable"
+                                    rowspan="1"
+                                    colspan="1"
+                                    aria-label="Start date: activate to sort column ascending"
+                                    style="width: 104.578px"
+                                  >
+                                    Email Address
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr role="row" class="odd">
+                                  <td class="sorting_1">1</td>
+                                  <td>Suraj Jamdade</td>
+                                  <td>+91 9090909090</td>
+                                  <td>suraj@gmail.com</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ACTIVE CUSTMOURS-->
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <h5 class="text-danger">ACTIVE CUSTMOURS</h5>
+
+                    <!-- Toggle Button -->
+                    <label class="custom-switch mb-3">
+                      <input type="checkbox" id="bottomMeasuremntToggle" />
+                      <span class="custom-switch-slider"></span>
+                    </label>
+                  </div>
+
+                  <div class="collapse mb-3" id="collapseBottomMeasurement">
+                    <div class="row">
+                      <div class="col-xl-12">
+                        <div class="card p-3">
+                          <div class="table-responsive">
+                            <table
+                              id="datatable"
+                              class="display compact table table-striped table-bordered dataTable"
+                              role="grid"
+                              aria-describedby="datatable_info"
+                            >
+                              <thead>
+                                <tr role="row">
+                                  <th
+                                    class="sorting_asc"
+                                    tabindex="0"
+                                    aria-controls="datatable"
+                                    rowspan="1"
+                                    colspan="1"
+                                    aria-sort="ascending"
+                                    aria-label="Name: activate to sort column descending"
+                                    style="width: 155.672px"
+                                  >
+                                    #
+                                  </th>
+
+                                  <th
+                                    class="sorting"
+                                    tabindex="0"
+                                    aria-controls="datatable"
+                                    rowspan="1"
+                                    colspan="1"
+                                    aria-label="Office: activate to sort column ascending"
+                                    style="width: 113.078px"
+                                  >
+                                    Customer Name
+                                  </th>
+
+                                  <th
+                                    class="sorting"
+                                    tabindex="0"
+                                    aria-controls="datatable"
+                                    rowspan="1"
+                                    colspan="1"
+                                    aria-label="Start date: activate to sort column ascending"
+                                    style="width: 104.578px"
+                                  >
+                                    Mobile Number
+                                  </th>
+                                  <th
+                                    class="sorting"
+                                    tabindex="0"
+                                    aria-controls="datatable"
+                                    rowspan="1"
+                                    colspan="1"
+                                    aria-label="Start date: activate to sort column ascending"
+                                    style="width: 104.578px"
+                                  >
+                                    Email Address
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr role="row" class="odd">
+                                  <td class="sorting_1">1</td>
+                                  <td>Suraj Jamdade</td>
+                                  <td>+91 9090909090</td>
+                                  <td>suraj@gmail.com</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--  FEEDBACKS-->
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <h5 class="text-danger">FEEDBACKS</h5>
+
+                    <!-- Toggle Button -->
+                    <label class="custom-switch mb-3">
+                      <input type="checkbox" id="feedbackMeasuremntToggle" />
+                      <span class="custom-switch-slider"></span>
+                    </label>
+                  </div>
+
+                  <div class="collapse mb-3" id="collapseFeedbackMeasurement">
+                    <div class="row">
+                      <div class="col-xl-12">
+                        <div class="card p-3">
+                          <div class="table-responsive">
+                            <table
+                              id="datatable"
+                              class="display compact table table-striped table-bordered dataTable"
+                              role="grid"
+                              aria-describedby="datatable_info"
+                            >
+                              <thead>
+                                <tr role="row">
+                                  <th
+                                    class="sorting_asc"
+                                    tabindex="0"
+                                    aria-controls="datatable"
+                                    rowspan="1"
+                                    colspan="1"
+                                    aria-sort="ascending"
+                                    aria-label="Name: activate to sort column descending"
+                                    style="width: 155.672px"
+                                  >
+                                    #
+                                  </th>
+
+                                  <th
+                                    class="sorting"
+                                    tabindex="0"
+                                    aria-controls="datatable"
+                                    rowspan="1"
+                                    colspan="1"
+                                    aria-label="Office: activate to sort column ascending"
+                                    style="width: 113.078px"
+                                  >
+                                    Name
+                                  </th>
+
+                                  <th
+                                    class="sorting"
+                                    tabindex="0"
+                                    aria-controls="datatable"
+                                    rowspan="1"
+                                    colspan="1"
+                                    aria-label="Start date: activate to sort column ascending"
+                                    style="width: 104.578px"
+                                  >
+                                    Review
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr role="row" class="odd">
+                                  <td class="sorting_1">1</td>
+                                  <td>Suraj Jamdade</td>
+                                  <td>Awesome service</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end app-wrap -->
+    </div>
+    <!-- end app -->
+
+    <!--view Modal -->
+    <div
+      class="modal fade"
+      id="viewModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title" id="exampleModalLabel">
+              <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <button
+                    class="nav-link active mx-2 mb-2"
+                    id="nav-Basic-tab"
+                    data-toggle="tab"
+                    data-target="#nav-Basic"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-Basic"
+                    aria-selected="true"
+                  >
+                    Basic Details
+                  </button>
+                  <button
+                    class="nav-link mx-2 mb-2"
+                    id="nav-Fabrics-tab"
+                    data-toggle="tab"
+                    data-target="#nav-Fabrics"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-Fabrics"
+                    aria-selected="false"
+                  >
+                    Fabrics
+                  </button>
+                  <button
+                    class="nav-link mx-2 mb-2"
+                    id="nav-Top-tab"
+                    data-toggle="tab"
+                    data-target="#nav-Top"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-Top"
+                    aria-selected="false"
+                  >
+                    Top Measurements
+                  </button>
+                  <button
+                    class="nav-link mx-2 mb-2"
+                    id="nav-Bottom-tab"
+                    data-toggle="tab"
+                    data-target="#nav-Bottom"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-Bottom"
+                    aria-selected="false"
+                  >
+                    Bottom Measurements
+                  </button>
+                  <button
+                    class="nav-link mx-2 mb-2"
+                    id="nav-Barcode-tab"
+                    data-toggle="tab"
+                    data-target="#nav-Barcode"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-Barcode"
+                    aria-selected="false"
+                  >
+                    Barcode
+                  </button>
+                </div>
+              </nav>
+            </div>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="tab-content" id="nav-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="nav-Basic"
+                role="tabpanel"
+                aria-labelledby="nav-Basic-tab"
+              >
+                <div class="row">
+                  <div class="col-md-6 col-12 mb-3">
+                    <div class="table-responsive">
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="text-dark">Bill Number</th>
+                            <th scope="col" class="text-dark">#001</th>
+                          </tr>
+                          <tr>
+                            <th scope="col" class="text-dark">Name</th>
+                            <th scope="col" class="text-dark">Suraj Jamdade</th>
+                          </tr>
+                          <tr>
+                            <th scope="col" class="text-dark">Order Date</th>
+                            <th scope="col" class="text-dark">15 March 2025</th>
+                          </tr>
+                          <tr>
+                            <th scope="col" class="text-dark">Delivery Date</th>
+                            <th scope="col" class="text-dark">25 March 2025</th>
+                          </tr>
+                        </thead>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-12 mb-3">
+                    <div class="table-responsive">
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="text-dark">Mobile Number</th>
+                            <th scope="col" class="text-dark">
+                              +91 9090909090
+                            </th>
+                          </tr>
+                          <tr>
+                            <th scope="col" class="text-dark">Salesman Code</th>
+                            <th scope="col" class="text-dark">#001</th>
+                          </tr>
+                          <tr>
+                            <th scope="col" class="text-dark">DOB</th>
+                            <th scope="col" class="text-dark">15 March 2025</th>
+                          </tr>
+                          <tr>
+                            <th scope="col" class="text-dark">GST Number</th>
+                            <th scope="col" class="text-dark">
+                              27DNYPP0795M1ZR
+                            </th>
+                          </tr>
+                        </thead>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="nav-Fabrics"
+                role="tabpanel"
+                aria-labelledby="nav-Fabrics-tab"
+              >
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col" class="text-dark">Name</th>
+                        <th scope="col" class="text-dark">Qantity</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="text-dark">Shirt</th>
+                        <td class="text-dark">1</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark">Kurta</th>
+                        <td class="text-dark">1</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark">Pant</th>
+                        <td class="text-dark">1</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="nav-Top"
+                role="tabpanel"
+                aria-labelledby="nav-Top-tab"
+              >
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col" class="text-dark">Cutting Date</th>
+                        <th scope="col" class="text-dark">15 March 2025</th>
+                        <th scope="col" class="text-dark">Ready Date</th>
+                        <th scope="col" class="text-dark">15 March 2025</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="2">
+                          Selected Particulars
+                        </th>
+                        <td class="text-dark">
+                          <span class="badge badge-danger">Shirt</span>
+                        </td>
+                        <td class="text-dark">
+                          <span class="badge badge-danger">Kurta</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="2">
+                          Length
+                        </th>
+                        <td class="text-dark">10</td>
+                        <td class="text-dark">10</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="2">
+                          Shoulder
+                        </th>
+                        <td class="text-dark">10</td>
+                        <td class="text-dark">10</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="2">
+                          Sleeve
+                        </th>
+                        <td class="text-dark">10</td>
+                        <td class="text-dark">10</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="2">Arm</th>
+
+                        <td class="text-dark">
+                          <div class="row">
+                            <div class="col-6">10</div>
+                            <div class="col-6 border-left">10</div>
+                          </div>
+                        </td>
+                        <td class="text-dark">
+                          <div class="row">
+                            <div class="col-6">10</div>
+                            <div class="col-6 border-left">10</div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="2">Cuff</th>
+                        <td class="text-dark">
+                          <div class="row">
+                            <div class="col-6">10</div>
+                            <div class="col-6 border-left">10</div>
+                          </div>
+                        </td>
+                        <td class="text-dark">10</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="2">3/4</th>
+                        <td class="text-dark">
+                          <div class="row">
+                            <div class="col-6">10</div>
+                            <div class="col-6 border-left">10</div>
+                          </div>
+                        </td>
+                        <td class="text-dark">
+                          <div class="row">
+                            <div class="col-6">10</div>
+                            <div class="col-6 border-left">10</div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="2">
+                          Collar
+                        </th>
+
+                        <td class="text-dark">10</td>
+                        <td class="text-dark">10</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="2">Chest</th>
+                        <td class="text-dark">
+                          <div class="row">
+                            <div class="col-6">10</div>
+                            <div class="col-6 border-left">10</div>
+                          </div>
+                        </td>
+                        <td class="text-dark">
+                          <div class="row">
+                            <div class="col-6">10</div>
+                            <div class="col-6 border-left">10</div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="2">Belly</th>
+                        <td class="text-dark">
+                          <div class="row">
+                            <div class="col-6">10</div>
+                            <div class="col-6 border-left">10</div>
+                          </div>
+                        </td>
+                        <td class="text-dark">
+                          <div class="row">
+                            <div class="col-6">10</div>
+                            <div class="col-6 border-left">10</div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="2">Hip</th>
+                        <td class="text-dark">
+                          <div class="row">
+                            <div class="col-6">10</div>
+                            <div class="col-6 border-left">10</div>
+                          </div>
+                        </td>
+                        <td class="text-dark">
+                          <div class="row">
+                            <div class="col-6">10</div>
+                            <div class="col-6 border-left">10</div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="2">Style</th>
+
+                        <td class="text-dark">Apple</td>
+                        <td class="text-dark">Apple</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="2">
+                          Text Note
+                        </th>
+
+                        <td class="text-dark">NA</td>
+                        <td class="text-dark">NA</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="2">
+                          Voice Note
+                        </th>
+
+                        <td class="text-dark" colspan="2">
+                          <audio controls>
+                            <source
+                              src="your-audio-file.mp3"
+                              type="audio/mpeg"
+                            />
+                            Your browser does not support the audio element.
+                          </audio>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="2">
+                          Picture
+                        </th>
+
+                        <td class="text-dark" colspan="2">
+                          <div style="width: 50px; height: 50px">
+                            <img
+                              src="assets/img/fabric.jpeg"
+                              alt="fabrix"
+                              style="
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                              "
+                            />
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="nav-Bottom"
+                role="tabpanel"
+                aria-labelledby="nav-Bottom-tab"
+              >
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col" class="text-dark">Cutting Date</th>
+                        <th scope="col" class="text-dark">15 March 2025</th>
+                        <th scope="col" class="text-dark">Ready Date</th>
+                        <th scope="col" class="text-dark">15 March 2025</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th
+                          scope="row"
+                          class="text-dark text-center"
+                          colspan="4"
+                        >
+                          <span class="badge badge-danger">Pant</span>
+                        </th>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="3">
+                          Length
+                        </th>
+                        <td class="text-dark">10</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="3">Waist</th>
+                        <td class="text-dark">10</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="3">Hip</th>
+                        <td class="text-dark">10</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="3">Thigh</th>
+                        <td class="text-dark">
+                          <div class="row">
+                            <div class="col-6">10</div>
+                            <div class="col-6 border-left">10</div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="3">Knee</th>
+                        <td class="text-dark">
+                          <div class="row">
+                            <div class="col-6">10</div>
+                            <div class="col-6 border-left">10</div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="3">
+                          Potree
+                        </th>
+                        <td class="text-dark">
+                          <div class="row">
+                            <div class="col-6">10</div>
+                            <div class="col-6 border-left">10</div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="3">
+                          Bottom
+                        </th>
+                        <td class="text-dark">10</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="3">
+                          Pockland
+                        </th>
+                        <td class="text-dark">10</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="3">Style</th>
+                        <td class="text-dark">1 back pocket</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="3">
+                          Text Note
+                        </th>
+                        <td class="text-dark">pocket</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="2">
+                          Voice Note
+                        </th>
+
+                        <td class="text-dark" colspan="2">
+                          <audio controls>
+                            <source
+                              src="your-audio-file.mp3"
+                              type="audio/mpeg"
+                            />
+                            Your browser does not support the audio element.
+                          </audio>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="2">
+                          Picture
+                        </th>
+
+                        <td class="text-dark" colspan="2">
+                          <div style="width: 50px; height: 50px">
+                            <img
+                              src="assets/img/fabric.jpeg"
+                              alt="fabrix"
+                              style="
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                              "
+                            />
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="nav-Barcode"
+                role="tabpanel"
+                aria-labelledby="nav-Barcode-tab"
+              >
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col" class="text-dark">
+                          <div
+                            class="d-flex align-items-center gap-3 p-5 border rounded shadow-sm bg-light"
+                          >
+                            <div
+                              style="width: 160px; height: 80px"
+                              class="d-flex flex-column align-items-center"
+                            >
+                              <img
+                                src="assets/img/barcode.png"
+                                alt="Barcode"
+                                class="img-fluid"
+                                style="
+                                  width: 100%;
+                                  height: 100%;
+                                  object-fit: contain;
+                                "
+                              />
+                              <h6 class="text-center mt-2 fw-bold text-primary">
+                                SP COTTON INDUSTRIES
+                              </h6>
+                            </div>
+                            <div class="text-left">
+                              <h5 class="fw-bold text-dark mb-1">10006</h5>
+                              <p class="text-dark mb-1 font-weight-bold">
+                                TOTAL SHIRT -
+                                <span class="fw-semibold">1</span>
+                              </p>
+                              <p class="text-dark font-weight-bold">
+                                SHIRT NO - <span class="fw-semibold">01</span>
+                              </p>
+                            </div>
+                          </div>
+                        </th>
+                      </tr>
+
+                      <tr>
+                        <th scope="col" class="text-dark">
+                          <div
+                            class="d-flex align-items-center gap-3 p-5 border rounded shadow-sm bg-light"
+                          >
+                            <div
+                              style="width: 160px; height: 80px"
+                              class="d-flex flex-column align-items-center"
+                            >
+                              <img
+                                src="assets/img/barcode.png"
+                                alt="Barcode"
+                                class="img-fluid"
+                                style="
+                                  width: 100%;
+                                  height: 100%;
+                                  object-fit: contain;
+                                "
+                              />
+                              <h6 class="text-center mt-2 fw-bold text-primary">
+                                SP COTTON INDUSTRIES
+                              </h6>
+                            </div>
+                            <div class="text-left">
+                              <h5 class="fw-bold text-dark mb-1">10006</h5>
+                              <p class="text-dark mb-1 font-weight-bold">
+                                TOTAL KURTA -
+                                <span class="fw-semibold">1</span>
+                              </p>
+                              <p class="text-dark font-weight-bold">
+                                KURTA NO - <span class="fw-semibold">01</span>
+                              </p>
+                            </div>
+                          </div>
+                        </th>
+                      </tr>
+
+                      <tr>
+                        <th scope="col" class="text-dark">
+                          <div
+                            class="d-flex align-items-center gap-3 p-5 border rounded shadow-sm bg-light"
+                          >
+                            <div
+                              style="width: 160px; height: 80px"
+                              class="d-flex flex-column align-items-center"
+                            >
+                              <img
+                                src="assets/img/barcode.png"
+                                alt="Barcode"
+                                class="img-fluid"
+                                style="
+                                  width: 100%;
+                                  height: 100%;
+                                  object-fit: contain;
+                                "
+                              />
+                              <h6 class="text-center mt-2 fw-bold text-primary">
+                                SP COTTON INDUSTRIES
+                              </h6>
+                            </div>
+                            <div class="text-left">
+                              <h5 class="fw-bold text-dark mb-1">10006</h5>
+                              <p class="text-dark mb-1 font-weight-bold">
+                                TOTAL PANT -
+                                <span class="fw-semibold">1</span>
+                              </p>
+                              <p class="text-dark font-weight-bold">
+                                PANT NO - <span class="fw-semibold">01</span>
+                              </p>
+                            </div>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <a href="bill-print.html" class="btn btn-primary">
+              <i class="nav-icon ti ti-file"></i> Print</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- plugins -->
+    <script src="assets/js/vendors.js"></script>
+
+    <!-- custom app -->
+    <script src="assets/js/app.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const formContainer = document.getElementById("form-container");
+
+        document.addEventListener("click", function (event) {
+          if (event.target.closest(".add-row")) {
+            const newRow = formContainer.firstElementChild.cloneNode(true);
+
+            // Clear input values
+            newRow.querySelectorAll("input, select").forEach((el) => {
+              el.value = "";
+            });
+
+            // Change the plus button to a remove button
+            const button = newRow.querySelector(".add-row");
+            button.innerHTML = '<i class="fa fa-minus"></i>';
+            button.classList.remove("btn-primary");
+            button.classList.add("btn-danger");
+            button.classList.replace("add-row", "remove-row");
+
+            formContainer.appendChild(newRow);
+          }
+
+          if (event.target.closest(".remove-row")) {
+            event.target.closest(".form-group-row").remove();
+          }
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $("#billingToggle").change(function () {
+          if ($(this).prop("checked")) {
+            $("#collapseBilling").collapse("show");
+          } else {
+            $("#collapseBilling").collapse("hide");
+          }
+        });
+      });
+      $(document).ready(function () {
+        $("#topMeasuremntToggle").change(function () {
+          if ($(this).prop("checked")) {
+            $("#collapseTopMeasurement").collapse("show");
+          } else {
+            $("#collapseTopMeasurement").collapse("hide");
+          }
+        });
+      });
+      $(document).ready(function () {
+        $("#bottomMeasuremntToggle").change(function () {
+          if ($(this).prop("checked")) {
+            $("#collapseBottomMeasurement").collapse("show");
+          } else {
+            $("#collapseBottomMeasurement").collapse("hide");
+          }
+        });
+      });
+      $(document).ready(function () {
+        $("#feedbackMeasuremntToggle").change(function () {
+          if ($(this).prop("checked")) {
+            $("#collapseFeedbackMeasurement").collapse("show");
+          } else {
+            $("#collapseFeedbackMeasurement").collapse("hide");
+          }
+        });
+      });
+    </script>
+
+    <script>
+      let mediaRecorder;
+      let audioChunks = [];
+
+      document
+        .getElementById("startRecord")
+        .addEventListener("click", async function () {
+          try {
+            const stream = await navigator.mediaDevices.getUserMedia({
+              audio: true,
+            });
+            mediaRecorder = new MediaRecorder(stream);
+
+            mediaRecorder.ondataavailable = (event) => {
+              audioChunks.push(event.data);
+            };
+
+            mediaRecorder.onstop = () => {
+              const audioBlob = new Blob(audioChunks, { type: "audio/webm" });
+              const audioUrl = URL.createObjectURL(audioBlob);
+              const audioPlayback = document.getElementById("audioPlayback");
+              audioPlayback.src = audioUrl;
+              audioPlayback.style.display = "block";
+              audioChunks = [];
+            };
+
+            mediaRecorder.start();
+            document.getElementById("startRecord").disabled = true;
+            document.getElementById("stopRecord").disabled = false;
+          } catch (error) {
+            console.error("Error accessing microphone:", error);
+            alert("Microphone access denied!");
+          }
+        });
+
+      document
+        .getElementById("stopRecord")
+        .addEventListener("click", function () {
+          if (mediaRecorder) {
+            mediaRecorder.stop();
+            document.getElementById("startRecord").disabled = false;
+            document.getElementById("stopRecord").disabled = true;
+          }
+        });
+    </script>
+
+    <script>
+      document
+        .getElementById("imageInput")
+        .addEventListener("change", function (event) {
+          const file = event.target.files[0];
+
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              const img = document.getElementById("imagePreview");
+              img.src = e.target.result;
+              img.style.display = "block";
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+    </script>
+
+    <!-- Initialize Choices.js -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Choices("#multiSelect", {
+          removeItemButton: true,
+        });
+      });
+    </script>
+  </body>
+</html>

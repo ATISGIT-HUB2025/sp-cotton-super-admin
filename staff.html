@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SP COTTON | SUPER ADMIN</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <!-- app favicon -->
+    <link rel="shortcut icon" href="assets/img/logo.webp" />
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      rel="stylesheet"
+    />
+    <!-- plugin stylesheets -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors.css" />
+    <!-- app style -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- Include Choices.js CSS & JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  </head>
+
+  <body>
+    <!-- begin app -->
+    <div class="app">
+      <!-- begin app-wrap -->
+      <div class="app-wrap">
+        <!-- begin pre-loader -->
+        <div class="loader">
+          <div class="h-100 d-flex justify-content-center">
+            <div class="align-self-center">
+              <img src="assets/img/loader/loader.svg" alt="loader" />
+            </div>
+          </div>
+        </div>
+
+        <header class="app-header top-bar">
+          <!-- begin navbar -->
+          <nav class="navbar navbar-expand-md">
+            <!-- begin navbar-header -->
+            <div class="navbar-header d-flex align-items-center">
+              <a class="navbar-brand" href="index.html">
+                <img
+                  src="assets/img/logo.webp"
+                  class="img-fluid logo-desktop"
+                  alt="logo"
+                />
+                <img
+                  src="assets/img/logo.webp"
+                  class="img-fluid logo-mobile"
+                  alt="logo"
+                />
+              </a>
+            </div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="ti ti-align-left"></i>
+            </button>
+            <!-- end navbar-header -->
+            <!-- begin navigation -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="navigation d-flex">
+                <ul class="navbar-nav nav-left">
+                  <li
+                    class="nav-item full-screen d-none d-lg-block"
+                    id="btnFullscreen"
+                  >
+                    <a href="javascript:void(0)" class="nav-link expand">
+                      <i class="icon-size-fullscreen"></i>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav nav-right ml-auto">
+                  <li class="nav-item dropdown user-profile">
+                    <a
+                      href="javascript:void(0)"
+                      class="nav-link dropdown-toggle"
+                      id="navbarDropdown4"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <img src="assets/img/avtar/02.jpg" alt="avtar-img" />
+                      <span class="bg-success user-status"></span>
+                    </a>
+                    <div
+                      class="dropdown-menu animated fadeIn"
+                      aria-labelledby="navbarDropdown"
+                    >
+                      <div class="bg-gradient px-4 py-3">
+                        <div
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <div class="mr-1">
+                            <h4 class="text-white mb-0">Admin</h4>
+                            <small class="text-white"
+                              >superadmin@gmail.com</small
+                            >
+                          </div>
+                          <a
+                            href="index.html"
+                            class="text-white font-20 tooltip-wrapper"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title=""
+                            data-original-title="Logout"
+                          >
+                            <i class="zmdi zmdi-power"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- end navigation -->
+          </nav>
+          <!-- end navbar -->
+        </header>
+
+        <div class="app-container">
+          <div class="app-main" id="main">
+            <div class="container-fluid">
+              <div class="row">
+                <div
+                  class="col-sm-6 col-md-6 col-lg-6 offset-lg-3 offset-md-3 offset-sm-0"
+                >
+                  <div class="">
+                    <div class="">
+                      <a href="dashboard.html" class="btn btn-primary btn-xs">
+                        <i class="fa fa-chevron-circle-left"></i> BACK</a
+                      >
+                    </div>
+                    <div class="text-center">
+                      <h5 class="text-danger">ADD STAFF</h5>
+                    </div>
+                  </div>
+
+                  <div class="row mb-5">
+                    <div class="col-xl-12">
+                      <div class="card card-statistics">
+                        <div class="card-body">
+                          <form>
+                            <div class="form-group row">
+                              <label class="col-sm-4 col-form-label"
+                                >NAME</label
+                              >
+                              <div class="col-sm-8">
+                                <input type="text" class="form-control" />
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-sm-4 col-form-label"
+                                >MOBILE NUMBER</label
+                              >
+                              <div class="col-sm-8">
+                                <input type="text" class="form-control" />
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-sm-4 col-form-label"
+                                >DATE OF BIRTH
+                              </label>
+                              <div class="col-sm-8">
+                                <input type="text" class="form-control" />
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-sm-4 col-form-label"
+                                >ADHAR NUMBER
+                              </label>
+                              <div class="col-sm-8">
+                                <input type="text" class="form-control" />
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-sm-4 col-form-label"
+                                >ROLE</label
+                              >
+                              <div class="col-sm-8">
+                                <select class="form-control form-select">
+                                  <option value="" selected>
+                                    Select (DROPLIST)
+                                  </option>
+                                  <option value="">Super Admin</option>
+                                  <option value="">Admin</option>
+                                  <option value="">Salesman</option>
+                                  <option value="">Payment Counter</option>
+                                  <option value="">Washing</option>
+                                  <option value="">Cutting Master</option>
+                                  <option value="">Stiches</option>
+                                  <option value="">Stiches Manager</option>
+                                  <option value="">Katch Button</option>
+                                  <option value="">Iron</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-sm-4 col-form-label"
+                                >SALARY</label
+                              >
+                              <div class="col-sm-8">
+                                <input type="text" class="form-control" />
+                              </div>
+                            </div>
+
+                            <div class="form-group row">
+                              <label class="col-sm-4 col-form-label"
+                                >SALARY TYPE</label
+                              >
+                              <div class="col-sm-8">
+                                <input type="text" class="form-control" />
+                              </div>
+                            </div>
+
+                            <div class="form-group row">
+                              <label class="col-sm-4 col-form-label"
+                                >SALESMAN CODE</label
+                              >
+                              <div class="col-sm-8">
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  placeholder=""
+                                />
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- STAFF LIST -->
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <h5 class="text-danger">STAFF LIST</h5>
+
+                    <label class="custom-switch mb-3">
+                      <input type="checkbox" id="billingToggle" />
+                      <span class="custom-switch-slider"></span>
+                    </label>
+                  </div>
+
+                  <div class="collapse mb-3" id="collapseBilling">
+                    <div class="row mb-5">
+                      <div class="col-xl-12">
+                        <div class="card card-statistics">
+                          <div class="card-body">
+                            <div class="datatable-wrapper table-responsive">
+                              <div
+                                id="datatable_wrapper"
+                                class="dataTables_wrapper dt-bootstrap4"
+                              >
+                                <div class="row">
+                                  <div class="col-sm-12 col-md-6"></div>
+                                  <div class="col-sm-12 col-md-6"></div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-12">
+                                    <table
+                                      id="datatable"
+                                      class="display compact table table-striped table-bordered dataTable"
+                                      role="grid"
+                                      aria-describedby="datatable_info"
+                                    >
+                                      <thead>
+                                        <tr role="row">
+                                          <th
+                                            class="sorting_asc"
+                                            tabindex="0"
+                                            aria-controls="datatable"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-sort="ascending"
+                                            aria-label="Name: activate to sort column descending"
+                                            style="width: 155.672px"
+                                          >
+                                            SALESMAN CODE
+                                          </th>
+
+                                          <th
+                                            class="sorting"
+                                            tabindex="0"
+                                            aria-controls="datatable"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-label="Office: activate to sort column ascending"
+                                            style="width: 113.078px"
+                                          >
+                                            NAME
+                                          </th>
+                                          <th
+                                            class="sorting"
+                                            tabindex="0"
+                                            aria-controls="datatable"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-label="Age: activate to sort column ascending"
+                                            style="width: 52.1562px"
+                                          >
+                                            MOBILE NO
+                                          </th>
+                                          <th
+                                            class="sorting"
+                                            tabindex="0"
+                                            aria-controls="datatable"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-label="Start date: activate to sort column ascending"
+                                            style="width: 104.578px"
+                                          >
+                                            ROLE
+                                          </th>
+
+                                          <th
+                                            class="sorting"
+                                            tabindex="0"
+                                            aria-controls="datatable"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-label="Salary: activate to sort column ascending"
+                                            style="width: 85.4844px"
+                                          >
+                                            ACTION
+                                          </th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr role="row" class="odd">
+                                          <td class="sorting_1">001</td>
+                                          <td>Suraj Jamdade</td>
+                                          <td>+91 9090909090</td>
+                                          <td>
+                                            <span class="badge badge-success"
+                                              >Salesman</span
+                                            >
+                                          </td>
+                                          <td>
+                                            <button
+                                              class="btn btn-dark btn-xs"
+                                              type="button"
+                                              data-toggle="modal"
+                                              data-target="#viewModal"
+                                            >
+                                              <i class="nav-icon ti ti-eye"></i>
+                                            </button>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ATTENDANCE -->
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <h5 class="text-danger">ATTENDANCE</h5>
+
+                    <!-- Toggle Button -->
+                    <label class="custom-switch mb-3">
+                      <input type="checkbox" id="topMeasuremntToggle" />
+                      <span class="custom-switch-slider"></span>
+                    </label>
+                  </div>
+
+                  <div class="collapse mb-3" id="collapseTopMeasurement">
+                    <div class="row">
+                      <div class="col-xl-12">
+                        <div class="card p-3">
+                          <div class="row">
+                            <div class="col-lg-6 col-12 mb-4">
+                              <div class="input-group">
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="Search Here ...."
+                                  aria-label="Recipient's username"
+                                  aria-describedby="button-addon2"
+                                />
+                                <div class="input-group-append">
+                                  <button
+                                    class="btn btn-primary"
+                                    type="button"
+                                    id="button-addon2"
+                                  >
+                                    Search
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-5">
+                              <select
+                                name=""
+                                id=""
+                                class="form-control form-select"
+                              >
+                                <option value="">Last 24 Hours</option>
+                                <option value="">Last 7 Days</option>
+                                <option value="">Last 30 Days</option>
+                              </select>
+                            </div>
+                            <div class="col-lg-12">
+                              <div class="datatable-wrapper table-responsive">
+                                <div
+                                  id="datatable_wrapper"
+                                  class="dataTables_wrapper dt-bootstrap4"
+                                >
+                                  <div class="row">
+                                    <div class="col-sm-12 col-md-6"></div>
+                                    <div class="col-sm-12 col-md-6"></div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-sm-12">
+                                      <table
+                                        id="datatable"
+                                        class="display compact table table-striped table-bordered dataTable"
+                                        role="grid"
+                                        aria-describedby="datatable_info"
+                                      >
+                                        <thead>
+                                          <tr role="row">
+                                            <th
+                                              class="sorting_asc"
+                                              tabindex="0"
+                                              aria-controls="datatable"
+                                              rowspan="1"
+                                              colspan="1"
+                                              aria-sort="ascending"
+                                              aria-label="Name: activate to sort column descending"
+                                              style="width: 155.672px"
+                                            >
+                                              #
+                                            </th>
+
+                                            <th
+                                              class="sorting"
+                                              tabindex="0"
+                                              aria-controls="datatable"
+                                              rowspan="1"
+                                              colspan="1"
+                                              aria-label="Office: activate to sort column ascending"
+                                              style="width: 113.078px"
+                                            >
+                                              User Name
+                                            </th>
+                                            <th
+                                              class="sorting"
+                                              tabindex="0"
+                                              aria-controls="datatable"
+                                              rowspan="1"
+                                              colspan="1"
+                                              aria-label="Age: activate to sort column ascending"
+                                              style="width: 52.1562px"
+                                            >
+                                              Role
+                                            </th>
+                                            <th
+                                              class="sorting"
+                                              tabindex="0"
+                                              aria-controls="datatable"
+                                              rowspan="1"
+                                              colspan="1"
+                                              aria-label="Start date: activate to sort column ascending"
+                                              style="width: 104.578px"
+                                            >
+                                              Date
+                                            </th>
+                                            <th
+                                              class="sorting"
+                                              tabindex="0"
+                                              aria-controls="datatable"
+                                              rowspan="1"
+                                              colspan="1"
+                                              aria-label="Start date: activate to sort column ascending"
+                                              style="width: 104.578px"
+                                            >
+                                              Check In
+                                            </th>
+                                            <th
+                                              class="sorting"
+                                              tabindex="0"
+                                              aria-controls="datatable"
+                                              rowspan="1"
+                                              colspan="1"
+                                              aria-label="Start date: activate to sort column ascending"
+                                              style="width: 104.578px"
+                                            >
+                                              Check Out
+                                            </th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr role="row" class="odd">
+                                            <td class="sorting_1">1</td>
+
+                                            <td>Suraj Jamdade</td>
+                                            <td>Sales Man</td>
+                                            <td>28 March 2025</td>
+                                            <td>9 AM</td>
+                                            <td>6 PM</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card text-right">
+                    <div class="card-body">
+                      <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-save"></i> Save & Print
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end app-wrap -->
+    </div>
+    <!-- end app -->
+
+    <!--view Modal -->
+    <div
+      class="modal fade"
+      id="viewModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-md modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title text-dark" id="exampleModalLabel">
+              Staff Details
+            </div>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <td class="text-dark">NAME</td>
+                  <td class="text-dark">Suraj Jamdade</td>
+                </tr>
+                <tr>
+                  <td class="text-dark">MOBILE NUMBER</td>
+                  <td class="text-dark">+91 9090909090</td>
+                </tr>
+                <tr>
+                  <td class="text-dark">DATE OF BIRTH</td>
+                  <td class="text-dark">14 March</td>
+                </tr>
+                <tr>
+                  <td class="text-dark">DATE OF BIRTH</td>
+                  <td class="text-dark">14 March</td>
+                </tr>
+                <tr>
+                  <td class="text-dark">ADHAR NUMBER</td>
+                  <td class="text-dark">123456789</td>
+                </tr>
+                <tr>
+                  <td class="text-dark">ROLE</td>
+                  <td class="text-dark">Salesman</td>
+                </tr>
+                <tr>
+                  <td class="text-dark">SALARY</td>
+                  <td class="text-dark">
+                    <span class="badge badge-success">Rs. 1000</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-dark">SALARY TYPE</td>
+                  <td class="text-dark">
+                    <span class="badge badge-success">Per piece</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-dark">SALESMAN CODE</td>
+                  <td class="text-dark">001</td>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- plugins -->
+    <script src="assets/js/vendors.js"></script>
+
+    <!-- custom app -->
+    <script src="assets/js/app.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const formContainer = document.getElementById("form-container");
+
+        document.addEventListener("click", function (event) {
+          if (event.target.closest(".add-row")) {
+            const newRow = formContainer.firstElementChild.cloneNode(true);
+
+            // Clear input values
+            newRow.querySelectorAll("input, select").forEach((el) => {
+              el.value = "";
+            });
+
+            // Change the plus button to a remove button
+            const button = newRow.querySelector(".add-row");
+            button.innerHTML = '<i class="fa fa-minus"></i>';
+            button.classList.remove("btn-primary");
+            button.classList.add("btn-danger");
+            button.classList.replace("add-row", "remove-row");
+
+            formContainer.appendChild(newRow);
+          }
+
+          if (event.target.closest(".remove-row")) {
+            event.target.closest(".form-group-row").remove();
+          }
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $("#billingToggle").change(function () {
+          if ($(this).prop("checked")) {
+            $("#collapseBilling").collapse("show");
+          } else {
+            $("#collapseBilling").collapse("hide");
+          }
+        });
+      });
+      $(document).ready(function () {
+        $("#topMeasuremntToggle").change(function () {
+          if ($(this).prop("checked")) {
+            $("#collapseTopMeasurement").collapse("show");
+          } else {
+            $("#collapseTopMeasurement").collapse("hide");
+          }
+        });
+      });
+      $(document).ready(function () {
+        $("#bottomMeasuremntToggle").change(function () {
+          if ($(this).prop("checked")) {
+            $("#collapseBottomMeasurement").collapse("show");
+          } else {
+            $("#collapseBottomMeasurement").collapse("hide");
+          }
+        });
+      });
+    </script>
+
+    <script>
+      let mediaRecorder;
+      let audioChunks = [];
+
+      document
+        .getElementById("startRecord")
+        .addEventListener("click", async function () {
+          try {
+            const stream = await navigator.mediaDevices.getUserMedia({
+              audio: true,
+            });
+            mediaRecorder = new MediaRecorder(stream);
+
+            mediaRecorder.ondataavailable = (event) => {
+              audioChunks.push(event.data);
+            };
+
+            mediaRecorder.onstop = () => {
+              const audioBlob = new Blob(audioChunks, { type: "audio/webm" });
+              const audioUrl = URL.createObjectURL(audioBlob);
+              const audioPlayback = document.getElementById("audioPlayback");
+              audioPlayback.src = audioUrl;
+              audioPlayback.style.display = "block";
+              audioChunks = [];
+            };
+
+            mediaRecorder.start();
+            document.getElementById("startRecord").disabled = true;
+            document.getElementById("stopRecord").disabled = false;
+          } catch (error) {
+            console.error("Error accessing microphone:", error);
+            alert("Microphone access denied!");
+          }
+        });
+
+      document
+        .getElementById("stopRecord")
+        .addEventListener("click", function () {
+          if (mediaRecorder) {
+            mediaRecorder.stop();
+            document.getElementById("startRecord").disabled = false;
+            document.getElementById("stopRecord").disabled = true;
+          }
+        });
+    </script>
+
+    <script>
+      document
+        .getElementById("imageInput")
+        .addEventListener("change", function (event) {
+          const file = event.target.files[0];
+
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              const img = document.getElementById("imagePreview");
+              img.src = e.target.result;
+              img.style.display = "block";
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+    </script>
+
+    <!-- Initialize Choices.js -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Choices("#multiSelect", {
+          removeItemButton: true,
+        });
+      });
+    </script>
+  </body>
+</html>
